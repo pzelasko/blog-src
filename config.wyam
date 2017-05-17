@@ -1,0 +1,6 @@
+#recipe Blog
+
+Settings[BlogKeys.Title] = "Programmer's Tears";
+Settings[BlogKeys.Description] = Settings[BlogKeys.Title];
+Settings[BlogKeys.Image] = @"/images/main_smaller.jpg";
+Settings[BlogKeys.Intro] = "Welcome to my blog about software, machine learning and dry humor.";
