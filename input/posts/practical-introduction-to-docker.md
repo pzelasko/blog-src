@@ -19,7 +19,7 @@ Docker is a container manager, which is kind of like a virtual machine, but more
     
 Docker is also available on other Linuxes, Windows and Mac - you'll be able to find the installation instructions with a quick search. In order to be able to use the Docker without `sudo`, you can add yourself to the `docker` group and restart the service:
 
-    sudo usermod -a -G <username> docker
+    sudo usermod -a -G docker <username> 
     sudo service docker restart
     
 Okay, the Docker is set up. The next step is preparing a Dockerfile, which is kind of like a Makefile, but with easier syntax, and comprises of build steps which are performed to create a Docker image. Let's see an example with several build steps.
