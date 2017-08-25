@@ -13,6 +13,8 @@ Tags:
 
 I've just returned from the Interspeech 2017 conference in Stockholm. I've had a great time there, getting to know other researchers and engineers working on different aspects of speech. Since there were many tracks conducted in parallel, I'm pretty sure that I've missed many interesting presentations, but I tried my best to move around quickly and absorb as much knowledge as I could. Here's some of the papers/posters/presentations that I especially liked.
 
+_Edit: I've corrected some typos and added 2 more papers which weren't in my notes but I remembered them later._
+
 ## Automatic Speech Recognition
 
 **Rescoring-aware Beam Search for Reduced Search Errors in Contextual Automatic Speech Recognition** - the authors investigated the problem of how to successfully utilise a relatively small rescoring language model (LM) based on the information about the speaker (e.g. words he added to his dictionary, geo-localization specific LMs, his activity in some mobile apps, etc.) during the decoding stage of ASR (on-the-fly rescoring). They were able to improve the word error rate (WER) for their use-case without significantly affecting the decoding speed.
@@ -39,13 +41,17 @@ Along with my friends from the [Digital Signal Processing group at AGH-UST](http
 
 ## Others
 
+**Multi-Channel Apollo Mission Speech Transcript Calibration** - subjectively, this was the most impressive undertaking that I've seen at the conference. The authors have a task of converting 100.000 hours of non-transcribed speech into text - but it's not just any speech, it's the communications from the Apollo missions recorded on analog tapes. So far, they have 19k hours done. In the paper, they describe the design of 30-channel analog tape "digitizer" and their method for compensating noisy channels.
+
 **An RNN Model of Text Normalization** - this paper touches a quite under-researched subject which is text normalization. It is particularly difficult for morphologically rich languages (such as Polish or Russian), which makes the presented results even more impressive - the authors were able to train a seq2seq model which treats text normalization as a machine translation task. These kinds of models tend to make quite obvious silly mistakes (e.g. "1 cm" is sometimes translated as "one volt" instead of "one centimeter"), but the authors proposed to use a grammar (in FST form) for postprocessing (which was automatically extracted from the data).
 
 **Listening in the dips: Comparing relevant features for speech recognition in humans and machines** - the authors presented some very interesting results - basically, they trained a neural network based ASR on recordings mixed with modulated noise and they noticed that the ASR had basically the same transcription efficiency as human listeners. They also visualized the neuron activations and discovered that the neural network used almost exlusively the information in the "dips" (audio segments without noise), which is known to be the case with humans as well (they cited relevant previous works).
 
 **Query-by-Example Search with Discriminative Neural Acoustic Word Embeddings** - I was impressed by the creativity of the authors, who addressed the problem of searching a large audio collection for utterances of a keyword based on an audio input (not a textual keyword). They trained "audio-segment-embeddings" and used an efficient variant of nearest-neighbor search algorithm.
 
-**An Expanded Taxonomy of Semiotic Classes for Text Normalization** - another paper on the topic of text normalization (or should I say, _the other paper_), where the authors have shown a method for quickly gathering a set of problematic terms in text normalization. First they show a taxonomy, e.g. ordinal numbers (1st), cardinal numbers (12), "funny spelling" (_cul8r_), and many others. Then they said that asking a few untrained people to form a questionnaire in order to explain how these terms should be expanded yields sufficient amount of data to automatically construct a translation grammar (FST) which yields satisfactory results.
+**An Expanded Taxonomy of Semiotic Classes for Text Normalization** - another paper on the topic of text normalization (or should I say, _the other paper_), where the authors have shown a method for quickly gathering a set of problematic terms in text normalization. First they show a taxonomy, e.g. ordinal numbers (1st), cardinal numbers (12), "funny spelling" (_cul8r_), and many others. Then they claim that asking a few persons to fill a questionnaire in which they normalize these classes (_cul8r_ -> _see you later_) yields sufficient amount of data to automatically construct a translation grammar (FST),  which yields satisfactory results.
+
+**Conditional Generative Adversarial Nets Classifier for Spoken Language Identification** - I liked this work because I think it's a very smart way to utilise the famous GANs in speech-related tasks - the authors use conditional GANs to generate artificial i-vectors for different languages and then train their classifier using augmented data. I'd really like to see more applications of GANs in the audio domain.
 
 ## Conclusions
 
