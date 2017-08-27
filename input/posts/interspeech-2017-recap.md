@@ -13,6 +13,8 @@ Tags:
 
 I've just returned from the Interspeech 2017 conference in Stockholm. I've had a great time there, getting to know other researchers and engineers working on different aspects of speech. Since there were many tracks conducted in parallel, I'm pretty sure that I've missed many interesting presentations, but I tried my best to move around quickly and absorb as much knowledge as I could. Here's some of the papers/posters/presentations that I especially liked.
 
+All of the papers mentioned here (and many more) can be found at the [ISCA archive webiste](http://www.isca-speech.org/archive/Interspeech_2017).
+
 _Edit: I've corrected some typos and added 2 more papers which weren't in my notes but I remembered them later._
 
 ## Automatic Speech Recognition
